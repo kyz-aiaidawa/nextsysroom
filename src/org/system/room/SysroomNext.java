@@ -190,7 +190,9 @@ public class SysroomNext {
                 }
 
             }
-        } catch (ImageProcessingException | IOException ex) {
+        } catch (ImageProcessingException  ex) {
+            Logger.getLogger(SysroomNext.class.getName()).log(Level.SEVERE, null, ex);
+        }catch(IOException ex){
             Logger.getLogger(SysroomNext.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
@@ -229,7 +231,9 @@ public class SysroomNext {
             int imageWidth = directory.getImageWidth();
              Dimension d = new Dimension(imageWidth, imageHeight);
             return d;
-        } catch (ImageProcessingException | IOException ex) {
+        } catch (ImageProcessingException  ex) {
+            Logger.getLogger(SysroomNext.class.getName()).log(Level.SEVERE, null, ex);
+        }catch(IOException ex){
             Logger.getLogger(SysroomNext.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
